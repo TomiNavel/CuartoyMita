@@ -1,12 +1,12 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Button from "@/components/ui/Button";
-import bg from "@/public/hero-bg.avif";
+import intro from "@/public/intro.jpg";
 import Link from "next/link";
-import LogoSVG from "../svg/LogoSVG";
+
 import Image from "next/image";
 import { useAnimation, motion } from "framer-motion";
-import SocialLink from "../ui/SocialLink";
+import SocialLink from "../../app/contacto/SocialLink";
 import Animated from "./Animated";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import clsx from "clsx";
@@ -52,24 +52,12 @@ export default function Hero() {
         {(!isMobile || isMobile === undefined) && (
           <Image
             className="absolute top-0 left-0 object-cover w-full transition z-1"
-            src={bg}
+            src={intro}
             fill
             onLoad={() => setLoaded(true)}
             priority
             placeholder="blur"
-            alt="Lorem ipsum dolor"
-          />
-        )}
-        {(isMobile || isMobile === undefined) && (
-          <Image
-            className="absolute top-0 left-0 object-cover object-left w-full transition z-1"
-            src={
-              "https://images.unsplash.com/photo-1526318896980-cf78c088247c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            }
-            fill
-            onLoad={() => setLoaded(true)}
-            priority
-            alt="Lorem ipsum dolor"
+            alt="Bar Tienda"
           />
         )}
       </motion.div>
@@ -84,7 +72,7 @@ export default function Hero() {
                 duration={0.8}
                 variant={"top-sm"}
               >
-                <LogoSVG width={150} height={150} />
+                <Image src="/LogoWeb.svg" alt="Logo" width={150} height={150} />
               </Animated>
               <Animated
                 as="h1"
@@ -92,21 +80,20 @@ export default function Hero() {
                 variant={"top-sm"}
                 className="mb-4 heading-first text-neutral-200"
               >
-                Savor the Art
+                Saborea el Arte
                 <br />
-                <span className="text-primary-500">of Japanese Cuisine</span>
+                <span className="text-primary-500">de la Tradicion</span>
               </Animated>
               <Animated as="p" delay={0.6} variant="top-sm">
-                Embark on a culinary journey through the heart of Japan with our
-                authentic sushi and ramen dishes. Each bite is a testament to
-                the mastery of traditional techniques and the purity of fresh,
-                locally-sourced ingredients.
+                Disfruta de una experiencia gastronómica única con nuestros cafés artesanales, 
+                dulces caseros, embutidos selectos, quesos curados y una cuidada selección de vinos. 
+                Cada sorbo y bocado reflejan la pasión por los ingredientes frescos y el cariño de 
+                las recetas tradicionales.
               </Animated>
               <Animated delay={0.9} className="flex flex-row gap-8 mt-8">
                 <Link href="/menu#menu">
-                  <Button variant="primary">Explore menu</Button>
+                  <Button variant="primary">Productos</Button>
                 </Link>
-                {/* <Button variant="outlined">Secondary</Button> */}
               </Animated>
             </div>
             <div className="flex flex-row items-center gap-8 left-40 bottom-20">

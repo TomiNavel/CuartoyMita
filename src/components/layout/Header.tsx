@@ -1,16 +1,17 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import LogoSVG from "../svg/LogoSVG";
+import Logo from "/public/LogoWeb.jpg";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
 import Hamburger from "../ui/Hamburger";
 
 const links = [
-  { id: 0, title: "Home", path: "/" },
+  { id: 0, title: "Inicio", path: "/" },
   { id: 1, title: "Menu", path: "/menu" },
-  { id: 2, title: "About", path: "/about" },
-  { id: 3, title: "Contact", path: "/contact" },
+  { id: 2, title: "CuartoyMitá", path: "/cuartoymita" },
+  { id: 3, title: "Contacto", path: "/contacto" },
 ];
 
 export default function Header() {
@@ -54,17 +55,14 @@ export default function Header() {
         <div className="container">
           <div className="w-full py-4 mx-auto lg:flex md:justify-between md:items-center">
             <div className="flex items-center justify-between w-full">
-              <Link
-                href="/"
-                className="flex items-center justify-center gap-2 text-2xl font-semibold text-neutral-100"
-              >
-                <LogoSVG width={50} height={50} />
+            <Link href="/" className="flex items-center justify-center gap-2 text-2xl font-semibold text-neutral-100">
+              <Image src="/LogoWeb.svg" alt="Logo" width={50} height={50} />
                 <span className="flex gap-1">
-                  <span className="text-white font-brush">Cuarto</span>
-                  <span className="text-primary-500 font-brush">Y</span>
-                  <span className="text-white font-brush">Mitá</span>
+                <span className="text-white font-brush">Cuarto</span>
+                <span className="text-primary-500 font-brush">Y</span>
+                <span className="text-white font-brush">Mita</span>
                 </span>
-              </Link>
+            </Link>
               <Hamburger isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
             </div>
             <div
@@ -82,14 +80,14 @@ export default function Header() {
                       className={clsx(
                         "relative my-2 transition-colors duration-300 transform  md:mx-4 md:my-0",
                         pathname == path
-                          ? "text-primary-400"
-                          : "text-neutral-200 hover:text-primary-400"
+                          ? "text-primary-500"
+                          : "text-neutral-200 hover:text-primary-500"
                       )}
                       href={path}
                     >
                       {title}
                       {pathname == path && (
-                        <div className="absolute w-5 h-[3px] -translate-x-1/2 rounded-custom -bottom-2 left-1/2 bg-primary-400"></div>
+                        <div className="absolute w-5 h-[3px] -translate-x-1/2 rounded-custom -bottom-2 left-1/2 bg-primary-500"></div>
                       )}
                     </Link>
                   );

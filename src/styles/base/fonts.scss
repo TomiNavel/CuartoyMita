@@ -160,3 +160,29 @@ $font-path: "../../fonts/";
   font-style: italic;
   src: url("#{$font-path}/Roboto/Roboto-BlackItalic.ttf") format("truetype");
 }
+
+// ---------------------------Old Standard TT------------------------
+
+@font-face {
+  font-family: "Old Standard TT";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("#{$font-path}/OldStandardTT/OldStandardTT-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Old Standard TT";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("#{$font-path}/OldStandardTT/OldStandardTT-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Old Standard TT";
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src: url("#{$font-path}/OldStandardTT/OldStandardTT-Italic.ttf") format("truetype");
+}

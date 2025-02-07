@@ -1,12 +1,12 @@
 import Link from "next/link";
 import React from "react";
-import LogoSVG from "../svg/LogoSVG";
+import Image from "next/image";
 
 const links = [
-  { id: 0, title: "Home", path: "/" },
+  { id: 0, title: "Inicio", path: "/" },
   { id: 1, title: "Menu", path: "/menu" },
-  { id: 2, title: "About", path: "/about" },
-  { id: 3, title: "Contact", path: "/contact" },
+  { id: 2, title: "CuartoyMita", path: "/cuartoymita" },
+  { id: 3, title: "Contacto", path: "/contacto" },
 ];
 
 export default function Footer() {
@@ -14,16 +14,14 @@ export default function Footer() {
     <footer id="Footer" className="py-6 bg-neutral-900">
       <div className="container container--sm">
         <div className="max-w-screen-xl mx-auto text-center">
-          <Link
-            href="/"
-            className="flex items-center justify-center gap-2 text-2xl font-semibold text-neutral-100"
-          >
-            <LogoSVG width={50} height={50} />
-            <span className="flex gap-1">
-              <span className="text-white font-brush">Asian</span>
-              <span className="text-primary-500 font-brush">Food</span>
-            </span>
-          </Link>
+        <Link href="/" className="flex items-center justify-center gap-2 text-2xl font-semibold text-neutral-100">
+              <Image src="/LogoWeb.svg" alt="Logo" width={50} height={50} />
+                <span className="flex gap-1">
+                <span className="text-white font-brush">Cuarto</span>
+                <span className="text-primary-500 font-brush">Y</span>
+                <span className="text-white font-brush">Mita</span>
+                </span>
+            </Link>
           <div className="flex flex-wrap items-center justify-center gap-6 mt-4 mb-6 text-neutral-900 dark:text-white">
             {links.map(({ id, title, path }) => {
               return (
@@ -37,11 +35,11 @@ export default function Footer() {
             Created by{" "}
             <Link
               className="hover:underline"
-              href={"https://github.com/brozinsky"}
+              href={"https://www.tominavel.com"}
             >
-              brozinsky
+              TomiNavel
             </Link>
-            {" "}© 2024 All Rights Reserved.
+            {" "}© 2025
           </span>
         </div>
       </div>

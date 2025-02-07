@@ -1,10 +1,9 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import clsx from "clsx";
 import Link from "next/link";
-import useMenuTabsStore from "../../stores/useMenuTabsStore";
+import useMenuTabsStore from "../../app/menu/useMenuTabsStore";
 
 type Props = {
   imgSrc: StaticImageData;
@@ -44,7 +43,7 @@ export default function CategoryTile({
           href={"/menu#menu"}
           className="z-30 flex flex-row items-center gap-1 text-base md:text-xl hover:underline"
         >
-          Discover{" "}
+          Ampliar{" "}
           <svg
             className="w-3.5 h-3.5 ms-2 rtl:rotate-180 translate-x-0 "
             aria-hidden="true"

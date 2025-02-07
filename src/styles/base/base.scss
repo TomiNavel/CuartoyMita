@@ -50,7 +50,7 @@ a {
 .team-section {
   .swiper-button-next,
   .swiper-button-prev {
-    @apply p-4 h-10 w-10 bottom-0 top-auto bg-neutral-900/60 rounded-xl border border-transparent text-neutral-200 bg-neutral-900/20 flex flex-row items-center justify-center gap-2;
+    @apply p-2 h-10 w-10 bottom-0 top-auto bg-neutral-900/60 rounded-xl border border-transparent text-neutral-200 flex flex-row items-center justify-center;
     transition: 0.25s ease all;
     &:after {
       @apply text-neutral-200 text-xl;
