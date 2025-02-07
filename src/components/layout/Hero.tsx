@@ -49,7 +49,6 @@ export default function Hero() {
         variants={animationVariants}
         transition={{ ease: "easeOut", duration: 1.5 }}
       >
-        {(!isMobile || isMobile === undefined) && (
           <Image
             className="absolute top-0 left-0 object-cover w-full transition z-1"
             src={intro}
@@ -59,7 +58,6 @@ export default function Hero() {
             placeholder="blur"
             alt="Bar Tienda"
           />
-        )}
       </motion.div>
       <div className="container z-10 w-full h-full mx-auto">
         <div className="grid w-full h-full max-w-full mx-auto md:grid-cols-2">

@@ -1,0 +1,9 @@
+services:
+  cuartoymita:
+    build: .
+    ports:
+      - "3001:3001"
+    restart: always
+    
+   # environment:
+   #   - NODE_ENV=production

@@ -8,7 +8,8 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 
 # Instala solo las dependencias de producción
-RUN npm install --production
+#RUN npm install --production
+RUN npm install
 
 # Copia el resto del código
 COPY . .
@@ -20,4 +21,4 @@ RUN npm run build
 EXPOSE 3001
 
 # Comando para iniciar la aplicación
-CMD ["npm", "start"]
+CMD ["npm", "run", "start", "--", "-p", "3001"]
