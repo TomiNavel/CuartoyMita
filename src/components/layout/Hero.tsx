@@ -6,7 +6,6 @@ import Link from "next/link";
 
 import Image from "next/image";
 import { useAnimation, motion } from "framer-motion";
-import SocialLink from "../../app/contacto/SocialLink";
 import Animated from "./Animated";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import clsx from "clsx";
@@ -49,15 +48,15 @@ export default function Hero() {
         variants={animationVariants}
         transition={{ ease: "easeOut", duration: 1.5 }}
       >
-          <Image
-            className="absolute top-0 left-0 object-cover w-full transition z-1"
-            src={intro}
-            fill
-            onLoad={() => setLoaded(true)}
-            priority
-            placeholder="blur"
-            alt="Bar Tienda"
-          />
+        <Image
+          className="absolute top-0 left-0 object-cover w-full transition z-1"
+          src={intro}
+          fill
+          onLoad={() => setLoaded(true)}
+          priority
+          placeholder="blur"
+          alt="Bar Tienda"
+        />
       </motion.div>
       <div className="container z-10 w-full h-full mx-auto">
         <div className="grid w-full h-full max-w-full mx-auto md:grid-cols-2">
@@ -83,9 +82,10 @@ export default function Hero() {
                 <span className="text-primary-500">de la Tradicion</span>
               </Animated>
               <Animated as="p" delay={0.6} variant="top-sm">
-                Disfruta de una experiencia gastronómica única con nuestros cafés artesanales, 
-                dulces caseros, embutidos selectos, quesos curados y una cuidada selección de vinos. 
-                Cada sorbo y bocado reflejan la pasión por los ingredientes frescos y el cariño de 
+                Disfruta de una experiencia gastronómica única con nuestros
+                cafés artesanales, dulces caseros, embutidos selectos, quesos
+                curados y una cuidada selección de vinos. Cada sorbo y bocado
+                reflejan la pasión por los ingredientes frescos y el cariño de
                 las recetas tradicionales.
               </Animated>
               <Animated delay={0.9} className="flex flex-row gap-8 mt-8">
@@ -93,38 +93,6 @@ export default function Hero() {
                   <Button variant="primary">Productos</Button>
                 </Link>
               </Animated>
-            </div>
-            <div className="flex flex-row items-center gap-8 left-40 bottom-20">
-              <Animated
-                type="spring"
-                delay={1.2}
-                duration={0.5}
-                variant="top-sm"
-              >
-                <SocialLink variant="facebook" url="https://facebook.com/" />
-              </Animated>
-              <Animated
-                type="spring"
-                delay={1.35}
-                duration={0.5}
-                variant="top-sm"
-              >
-                <SocialLink variant="instagram" url="https://instagram.com/" />
-              </Animated>
-              <Animated
-                type="spring"
-                delay={1.5}
-                duration={0.5}
-                variant="top-sm"
-              >
-                <SocialLink variant="twitter" url="https://twitter.com/" />
-              </Animated>
-
-              <Animated
-                variant="left"
-                delay={1.4}
-                className="w-80 h-[1px] bg-neutral-500"
-              ></Animated>
             </div>
           </div>
         </div>
