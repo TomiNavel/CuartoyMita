@@ -1,18 +1,16 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Cookies from "js-cookie";
 import Link from "next/link";
 
 const CookiesBanner = () => {
-    const [showBanner, setShowBanner] = useState(false);
-
-    useEffect(() => {
-        const cookiesAccepted = Cookies.get("cookiesAccepted");
-        if (!cookiesAccepted) {
-            setShowBanner(true);
+    const [showBanner, setShowBanner] = useState(() => {
+        if (typeof window !== 'undefined') {
+            return !Cookies.get("cookiesAccepted");
         }
-    }, []);
+        return false;
+    });
 
     const acceptCookies = () => {
         Cookies.set("cookiesAccepted", "true", { expires: 365 });

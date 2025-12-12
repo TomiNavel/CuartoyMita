@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 
 const getMatches = (query: string): boolean => {
   // Prevents SSR issues
@@ -16,7 +16,7 @@ export function useMediaQuery(query: string): boolean | undefined {
     if (initialLoad) {
       setInitialLoad(false);
     }
-  }, []);
+  }, [initialLoad]);
 
   function handleChange() {
     setHasMatches(getMatches(query));

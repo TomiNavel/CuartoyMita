@@ -4,14 +4,11 @@ import React from "react";
 import SocialLink from "@/app/contacto/SocialLink";
 import Link from "next/link";
 import ScrollAnimated from "@/components/layout/ScrollAnimated";
-import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { MapPinIcon } from "@heroicons/react/24/outline";
 import { PhoneIcon } from "@heroicons/react/24/outline";
 import { EnvelopeIcon } from "@heroicons/react/24/outline";
 
 export default function Contact() {
-  const isMobile = useMediaQuery(`(max-width: 768px)`);
-
   const address = ["Matemático Pedrayes 5", "33004 Oviedo", "Asturias"];
   const phone = "984 08 51 59";
   const email = "info@cuartoymita.com";

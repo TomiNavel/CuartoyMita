@@ -3,11 +3,11 @@
 import { motion } from "framer-motion";
 import React, { ReactNode } from "react";
 import { cva } from "class-variance-authority";
-import { X, Loader, ArrowUp } from "react-feather";
+import { X, ArrowUp } from "react-feather";
 import SpinnerSVG from "../svg/SpinnerSVG";
 
 type Props = {
-  onClick?: any;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
   children?: ReactNode;
   variant?: "primary" | "neutral" | "ghost" | "outlined" | null | undefined;
   icon?: string;
