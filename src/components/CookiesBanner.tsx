@@ -5,7 +5,7 @@ import Cookies from "js-cookie";
 import Link from "next/link";
 
 const CookiesBanner = () => {
-    const [showBanner, setShowBanner] = useState(() => {
+    const [showBanner, setShowBanner] = useState<boolean>(() => {
         if (typeof window !== 'undefined') {
             return !Cookies.get("cookiesAccepted");
         }

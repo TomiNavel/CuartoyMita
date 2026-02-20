@@ -14,7 +14,7 @@ export default function AboutExtended() {
               height={256}
               src={calidad}
               loading="lazy"
-              alt=""
+              alt="Selección de café de calidad en Cuarto y Mita"
             />
 
             <div className="p-8 bg-white lg:p-16 rounded-custom--lg">
@@ -52,7 +52,7 @@ export default function AboutExtended() {
               height={256}
               src={encuentro}
               loading="lazy"
-              alt=""
+              alt="Ambiente acogedor del café Cuarto y Mita en Oviedo"
             />
           </div>
         </div>

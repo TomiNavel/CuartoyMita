@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "Política de Cookies - Cuarto y Mita",
+  description: "Información sobre el uso de cookies en cuartoymita.com y cómo gestionarlas desde tu navegador.",
+  alternates: { canonical: "/politica-cookies" },
+};
+
 export default function PoliticaCookies() {
     return (
       <div className="max-w-4xl mx-auto px-6 py-12">
@@ -25,10 +31,10 @@ export default function PoliticaCookies() {
           Puedes configurar tu navegador para aceptar, rechazar o eliminar cookies. A continuación, algunos enlaces útiles:
         </p>
         <ul className="list-disc pl-6 text-blue-600 underline">
-          <li><a href="https://support.google.com/chrome/answer/95647?hl=es" target="_blank">Google Chrome</a></li>
-          <li><a href="https://support.mozilla.org/es/kb/Borrar%20cookies" target="_blank">Mozilla Firefox</a></li>
-          <li><a href="https://support.apple.com/es-es/HT201265" target="_blank">Safari</a></li>
-          <li><a href="https://support.microsoft.com/es-es/help/17442/windows-internet-explorer-delete-manage-cookies" target="_blank">Internet Explorer/Edge</a></li>
+          <li><a href="https://support.google.com/chrome/answer/95647?hl=es" target="_blank" rel="noopener noreferrer">Google Chrome</a></li>
+          <li><a href="https://support.mozilla.org/es/kb/Borrar%20cookies" target="_blank" rel="noopener noreferrer">Mozilla Firefox</a></li>
+          <li><a href="https://support.apple.com/es-es/HT201265" target="_blank" rel="noopener noreferrer">Safari</a></li>
+          <li><a href="https://support.microsoft.com/es-es/help/17442/windows-internet-explorer-delete-manage-cookies" target="_blank" rel="noopener noreferrer">Internet Explorer/Edge</a></li>
         </ul>
   
         <h2 className="text-xl font-semibold mt-6 mb-2">4. Cambios en esta política</h2>

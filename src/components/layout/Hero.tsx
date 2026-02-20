@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Button from "@/components/ui/Button";
-import intro from "@/public/intro.jpg";
+import intro from "@/public/intro.webp";
 import Link from "next/link";
 
 import Image from "next/image";

@@ -1,27 +1,38 @@
 # CuartoyMita
 
-![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue?style=for-the-badge&logo=typescript)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38bdf8?style=for-the-badge&logo=tailwind-css)
-![React](https://img.shields.io/badge/React-18.2-61dafb?style=for-the-badge&logo=react)
+![Next.js](https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-blue?style=for-the-badge&logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-38bdf8?style=for-the-badge&logo=tailwind-css)
+![React](https://img.shields.io/badge/React-61dafb?style=for-the-badge&logo=react)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-A modern, responsive website for a café built with Next.js 14 and Tailwind CSS. Features a clean design with smooth animations, product showcase, and contact information.
+A modern, responsive website for a café built with Next.js 16 and Tailwind CSS. Features a clean design with smooth animations, product showcase, and contact information.
 
 **Live Site**: [https://www.cuartoymita.com/](https://www.cuartoymita.com/)
 
 ## Features
 
+### UI & UX
 - **Responsive Design**: Fully responsive layout optimized for all devices
 - **Modern UI**: Clean and professional interface built with Tailwind CSS
 - **Smooth Animations**: Engaging animations powered by Framer Motion
-- **Product Menu**: Interactive menu with category filtering
+- **Product Menu**: Interactive menu with category filtering powered by Zustand
 - **Contact Section**: Easy-to-use contact information and social links
+- **Custom Error Pages**: Branded 404 and error pages matching the site design
+
+### Security
+- **Security Headers**: `X-Content-Type-Options`, `X-Frame-Options` and `Referrer-Policy` configured for all routes
 - **Cookie Policy**: GDPR-compliant cookie consent management
+
+### SEO
+- **Metadata**: Unique title and description for each page
+- **Social Sharing**: Site-wide OpenGraph and Twitter Card
+- **Sitemap & Robots**: Auto-generated `sitemap.xml` and `robots.txt`
+- **Canonical URLs**: Defined on every page
 
 ## Tech Stack
 
-- **Framework**: [Next.js 14](https://nextjs.org/) with App Router
+- **Framework**: [Next.js](https://nextjs.org/) with App Router
 - **Language**: [TypeScript](https://www.typescriptlang.org/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **Animations**: [Framer Motion](https://www.framer.com/motion/)
@@ -30,11 +41,6 @@ A modern, responsive website for a café built with Next.js 14 and Tailwind CSS.
 - **Carousel**: [Swiper](https://swiperjs.com/)
 
 ## Getting Started
-
-### Prerequisites
-
-- Node.js 18.x or higher
-- npm, yarn, or pnpm
 
 ### Installation
 
@@ -47,23 +53,21 @@ cd CuartoyMita
 2. Install dependencies:
 ```bash
 npm install
-# or
-yarn install
-# or
-pnpm install
 ```
 
 3. Run the development server:
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
+### Production Build
+
+```bash
+npm run build
+npm run start
+```
 
 ## Project Structure
 
@@ -74,6 +78,8 @@ cuartoymita/
 │   │   ├── contacto/     # Contact page
 │   │   ├── cuartoymita/  # About page
 │   │   ├── menu/         # Menu page with products
+│   │   ├── error.tsx     # Global error boundary
+│   │   ├── not-found.tsx # Custom 404 page
 │   │   └── page.tsx      # Home page
 │   ├── components/       # Reusable components
 │   │   ├── layout/       # Layout components
@@ -84,38 +90,10 @@ cuartoymita/
 └── package.json
 ```
 
-
-### Production Build
-
-```bash
-npm run build
-npm run start
-```
-
 ## License
 
-MIT License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-Copyright (c) 2025 CuartoyMita
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
 ## Contributions
 
 Contributions are welcome! Feel free to open an issue or submit a pull request.
-

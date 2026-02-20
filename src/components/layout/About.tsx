@@ -50,7 +50,7 @@ export default function About() {
                   width={284}
                   height={434}
                   src={ Image2 }
-                  alt=""
+                  alt="Interior del café Cuarto y Mita"
                 />
               </div>
             </div>
