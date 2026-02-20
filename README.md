@@ -42,52 +42,9 @@ A modern, responsive website for a café built with Next.js 16 and Tailwind CSS.
 
 ## Getting Started
 
-### Installation
-
-1. Clone the repository:
-```bash
-git clone https://github.com/TomiNavel/CuartoyMita.git
-cd CuartoyMita
-```
-
-2. Install dependencies:
 ```bash
 npm install
-```
-
-3. Run the development server:
-```bash
 npm run dev
-```
-
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-### Production Build
-
-```bash
-npm run build
-npm run start
-```
-
-## Project Structure
-
-```
-cuartoymita/
-├── src/
-│   ├── app/              # Next.js App Router pages
-│   │   ├── contacto/     # Contact page
-│   │   ├── cuartoymita/  # About page
-│   │   ├── menu/         # Menu page with products
-│   │   ├── error.tsx     # Global error boundary
-│   │   ├── not-found.tsx # Custom 404 page
-│   │   └── page.tsx      # Home page
-│   ├── components/       # Reusable components
-│   │   ├── layout/       # Layout components
-│   │   ├── svg/          # SVG components
-│   │   └── ui/           # UI components
-│   └── hooks/            # Custom React hooks
-├── public/               # Static assets
-└── package.json
 ```
 
 ## License
